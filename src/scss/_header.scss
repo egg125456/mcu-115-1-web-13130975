@@ -1,73 +1,86 @@
 header {
-  border-bottom: solid 1px var(--border-color);
+  .material-symbols-outlined {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+}
+.container {
+  width: 100%;
+  max-width: 90vw;
+  box-sizing: border-box;
+  margin: 0px auto;
 
-  .container {
-    width: 100%;
-    max-width: 90vw;
-    box-sizing: border-box;
-    margin: 0px auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
-    padding-left: 2rem;
-    padding-right: 2rem;
+  .header-inner {
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    .header-inner {
-      height: 4rem;
+    div.search {
       display: flex;
-      justify-content: space-between;
+      gap: 0;
+
+      input {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        width: 200px;
+        padding: 1rem 0.5rem 1rem 1rem;
+        border: none;
+        background-color: var(--gray-color-100);
+      }
+
+      button {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        padding: 0.5rem;
+        border: none;
+        background-color: var(--gray-color-100);
+        cursor: pointer;
+      }
+    }
+
+    button {
+      background-color: transparent;
+      padding: 0.5rem;
+      border: none;
+      cursor: pointer;
+      color: var(--text-color);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .site-title {
+      margin: 0px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.75rem;
+      color: var(--primary-color);
+    }
+    .header-brand,
+    .header-actions {
+      display: flex;
       align-items: center;
 
-      div.search {
-        display: flex;
-        gap: 0;
-
-        input {
-          border-top-left-radius: 1rem;
-          border-bottom-left-radius: 1rem;
-          width: 200px;
-          padding: 1rem 0.5rem 1rem 1rem;
-          border: none;
-          background-color: var(--gray-color-100);
-        }
-
-        button {
-          border-top-right-radius: 1rem;
-          border-bottom-right-radius: 1rem;
-          padding: 0.5rem;
-          border: none;
-          background-color: var(--gray-color-100);
-          cursor: pointer;
-        }
+      &.header-brand {
+        gap: 2rem;
       }
 
-      .site-title {
-        margin: 0px;
-        font-size: 1.25rem;
-        font-weight: 700;
-        line-height: 1.75rem;
-        color: var(--primary-color);
+      &.header-actions {
+        gap: 0.5rem;
       }
-      .header-brand,
-      .header-actions {
+      nav {
         display: flex;
-        align-items: center;
+        gap: 1.5rem;
 
-        &.header-brand {
-          gap: 2rem;
-        }
-
-        &.header-actions {
-          gap: 0.5rem;
-        }
-        nav {
-          display: flex;
-          gap: 1.5rem;
-
-          a {
-            color: var(--text-color);
-            text-decoration: inherit;
-            &:hover {
-              color: var(--primary-color);
-            }
+        a {
+          color: var(--text-color);
+          text-decoration: inherit;
+          &:hover {
+            color: var(--primary-color);
           }
         }
       }
