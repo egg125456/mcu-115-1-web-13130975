@@ -21,7 +21,14 @@ header {
 
     div.search {
       display: flex;
+      align-items: stretch;
       gap: 0;
+
+      .search input:focus-visible,
+      button:focus-visible {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 3px;
+      }
 
       input {
         border-top-left-radius: 1rem;
